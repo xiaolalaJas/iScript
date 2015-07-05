@@ -67,7 +67,7 @@ def async(tasks, queue, dir_, run=None, cb=None, num=10):
     queue = check_queue(queue, cb)
     sleep(len(queue), num)
     nsize = num - len(queue)
-    for i in xrange(nsize):
+    for i in range(nsize):
         try:
             task = tasks.popleft()
         except IndexError:
